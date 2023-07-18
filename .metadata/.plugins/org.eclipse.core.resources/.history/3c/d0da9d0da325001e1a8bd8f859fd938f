@@ -28,13 +28,13 @@ public class StudentDaoImpl implements StudentDao {
 		String query = "update student set name=?,city=? where id=?";
         int row = this.jdbcTemplate.update(query,stud.getName(),stud.getCity(),stud.getId());
 		return row;
+		return 0;
 	}
 
 	@Override
 	public int delete(int id) {
-		String query = "delete from student where id =?";
-        int row = this.jdbcTemplate.update(query,id);
-		return row;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 

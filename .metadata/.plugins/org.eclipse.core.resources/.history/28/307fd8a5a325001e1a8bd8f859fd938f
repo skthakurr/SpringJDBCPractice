@@ -23,16 +23,10 @@ public class App
 //        int row = studentDao.insert(stud);
  // 	System.out.println(row + " row inserted into Student");
         
-//        Student stud = new Student();
-//        stud.setId(105);
-//        stud.setName("Chola Pandit");
-//        stud.setCity("ChanchalPur");
-//        
-//        int row = studentDao.change(stud);
-//        System.out.println(row + " row updated");
+        Student stud = new Student();
+        stud.setId(105);
         
-        
-        int row = studentDao.delete(105);
-        System.out.println(row + " row deleted");
+        int row = studentDao.change(stud);
+        System.out.println(row + " row updated");
     }
 }

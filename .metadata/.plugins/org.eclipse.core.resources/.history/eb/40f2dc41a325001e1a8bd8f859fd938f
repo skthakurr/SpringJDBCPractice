@@ -15,24 +15,13 @@ public class App
         ApplicationContext context = new ClassPathXmlApplicationContext("com/springjdbc/springjdbcpractice/config.xml");
         StudentDao studentDao =context.getBean("studentDao", StudentDao.class);
         
-//        Student stud = new Student();
-//        stud.setId(105);
-//        stud.setCity("Bhopal");
-//        stud.setName("Bhola Pandit");
-//        
-//        int row = studentDao.insert(stud);
- // 	System.out.println(row + " row inserted into Student");
+        Student stud = new Student();
+        stud.setId(105);
+        stud.setCity("Bhopal");
+        stud.setName("Bhola Pandit");
         
-//        Student stud = new Student();
-//        stud.setId(105);
-//        stud.setName("Chola Pandit");
-//        stud.setCity("ChanchalPur");
-//        
-//        int row = studentDao.change(stud);
-//        System.out.println(row + " row updated");
+        int row = studentDao.insert(stud);
         
-        
-        int row = studentDao.delete(105);
-        System.out.println(row + " row deleted");
+        System.out.println(row + " row inserted into Student");
     }
 }

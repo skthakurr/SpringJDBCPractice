@@ -33,6 +33,6 @@ public class App
         
         
         int row = studentDao.delete(105);
-        System.out.println(row + " row deleted");
+        System.out.println(row + " row updated");
     }
 }
