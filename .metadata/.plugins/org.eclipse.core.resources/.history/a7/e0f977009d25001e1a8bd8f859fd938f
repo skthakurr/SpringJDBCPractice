@@ -1,0 +1,18 @@
+package com.springjdbc.springjdbcpractice;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Initilizing database for you..." );
+        ApplicationContext context = new ClassPathXmlApplicationContext("com/springjdbc/springjdbcpractice/config.xml");
+        JdbcTemplate jTemplate = context.getBean("jdbcTemplate",JdbcTemplate.class);
+        String query = "insert into student values(?,?,?)";
+        int row = jTemplate.update(query,103,"Sumit","Patna");
+        System.out.println(row + " Inserted into Student");
+    }
+}
