@@ -1,0 +1,9 @@
+package com.springjdbc.Dao;
+
+import com.springjdbc.entity.Student;
+import org.springframework.jdbc.core.RowMapper;
+
+public class RowMapperImpl implements RowMapper<Student>{
+
+
+}
